@@ -22,6 +22,11 @@ export const ContainerResumePersonal = styled.div`
         align-items: flex-start;
         gap: 2rem;
 
+        img{
+            width: 11rem;
+            border-radius: 12px;
+        }
+
         .content_info_resume_personal{
             display: flex;
             flex-direction: column;

@@ -9,7 +9,7 @@ export function Router(){
             <GlobalStyle />
             <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/detalhe" element={<DetailPost />} />
+                <Route path="/detalhe/:id" element={<DetailPost />} />
             </Routes>
         </BrowserRouter>
     )

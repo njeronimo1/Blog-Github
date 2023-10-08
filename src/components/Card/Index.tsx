@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 import { CardStyle } from "./style";
+import { PublicationProps } from "../PublicationsList";
+import { relativeDateFormatter } from "../../utils/dateFormated";
 
-export function Card(){
+interface CardProps{
+    publicationProps: PublicationProps
+}
+
+export function Card( { publicationProps } : CardProps){
+
     return(
 
         <CardStyle>
-            <Link to="detalhe" style={{textDecoration:'none'}}>
-            <span>Há 1 dia</span>
-            <h3>JavaScript data types and data strictures</h3>
+            <Link to={`/detalhe/${publicationProps.number}`} style={{textDecoration:'none'}}>
+                <span>{relativeDateFormatter(publicationProps.created_at)}</span>
+                <h3>{publicationProps.title}</h3>
 
-            <p>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.</p>
+                <p>{publicationProps.body.substring(0, 200)}</p>
             </Link>
         </CardStyle>
     )

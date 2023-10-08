@@ -8,6 +8,13 @@ export const ContainerDetailPost = styled.div`
     align-items: center;
     justify-content: center;
 
+    span{
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin:1rem
+    }
+
     .box_resume_personal{
         width: 100%;
         max-width: 1000px;
@@ -91,12 +98,19 @@ export const ContentDetailPost = styled.div`
     width: 100%;    
     
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     max-width: 900px;
     margin:0 auto;
 
     margin-top: 2rem;
+    padding-bottom: 2rem;
     color: white;
+    line-height: 180%;
+
+    a{
+        color: #3294f8;
+    }
 
 `
